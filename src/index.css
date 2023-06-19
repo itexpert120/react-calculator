@@ -2,74 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  @apply flex flex-col gap-4 justify-center items-center h-screen;
-}
-
-body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 h1 {
-  @apply text-4xl text-right pt-6 pb-2 px-2;
+  @apply text-8xl mb-6 font-thin;
 }
 
-.buttons {
-  @apply flex flex-row flex-1;
+.wrapper {
+  @apply h-screen w-screen flex flex-col justify-end items-center;
+}
+
+img {
+  @apply h-20;
+  fill: #ffffff;
 }
 
 button {
-  @apply h-12 w-16 border bg-[#727475] border-[#4d5051] text-xl font-normal outline-none transition-all;
+  @apply font-semibold;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
 }
 
-.top-row {
-  @apply bg-[#56595a];
+.buttons.top-row button {
+  @apply bg-[#9f9f9f] text-black;
+}
+
+.calc {
+  @apply max-w-sm mb-8;
+}
+
+.buttons {
+  @apply flex flex-row gap-4 justify-center items-center my-4;
+}
+
+button {
+  @apply bg-[#313131] rounded-full h-20 w-20 text-4xl flex justify-center items-center text-center p-0 m-0;
 }
 
 .buttons button:nth-child(4) {
-  @apply bg-[#f1a33b];
+  @apply bg-[#f69906] font-bold text-white;
+}
+
+.buttons.bottom-row {
+  @apply mx-auto;
 }
 
 .buttons.bottom-row button:nth-child(1) {
-  @apply flex-1 rounded-bl-xl;
+  @apply flex-1 text-left justify-start;
 }
 
 .buttons.bottom-row button:nth-child(3) {
-  @apply bg-[#f1a33b] rounded-br-xl;
-}
-
-button:hover {
-  @apply bg-opacity-80;
-}
-
-@layer utilities {
-  @variants responsive {
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-  }
+  @apply bg-[#f69906] font-bold;
 }

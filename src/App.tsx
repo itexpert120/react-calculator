@@ -43,16 +43,15 @@ function App() {
 
   return (
     <>
-      <h1 className="text-white font-bold">CALCULATOR</h1>
-      <div className="flex flex-col justify-center items-center my-5 shadow-lg rounded-xl">
-        <div className="text-[#e1e1e2] bg-[#444748] rounded-xl overflow-hidden">
-          <h1 className="max-w-[256px] overflow-x-scroll whitespace-nowrap margin-r-0 text-right pr-2 no-scrollbar">
+      <div className="wrapper text-white bg-black">
+        <div className="calc">
+          <h1 className="text-right">
             <span className="opacity-0">{"."}</span>
             {display === "" ? "0" : display}
           </h1>
 
           <div className="buttons top-row">
-            <button onClick={() => setDisplay("")}>C</button>
+            <button onClick={() => setDisplay("")}>AC</button>
             <button onClick={handleSignChange}>+/-</button>
             <button onClick={handlePercentage}>%</button>
             <button onClick={() => handleOperation("/")}>÷</button>
@@ -76,7 +75,9 @@ function App() {
             <button onClick={() => handleOperation("+")}>+</button>
           </div>
           <div className="buttons bottom-row">
-            <button onClick={() => handleDigit("0")}>0</button>
+            <button onClick={() => handleDigit("0")}>
+              &nbsp;&nbsp;&nbsp;0
+            </button>
             <button onClick={() => handleDigit(".")}>.</button>
             <button onClick={handleEquals}>=</button>
           </div>
