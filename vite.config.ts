@@ -11,7 +11,7 @@ export default defineConfig({
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
         name: "Calculator",
-        short_name: "Calculator",
+        short_name: "calculator",
         description: "iOS Calculator Clone",
         theme_color: "#ffffff",
         start_url: "/",
@@ -29,8 +29,13 @@ export default defineConfig({
           {
             src: "android-chrome-512x512.png",
             sizes: "512x512",
+            type: "any",
+          },
+          {
+            src: "android-chrome-512x512.png",
+            sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "maskable",
           },
         ],
       },
