@@ -29,7 +29,7 @@ button {
 
 .calc {
   @apply mx-auto my-8 flex flex-col;
-  max-width: 90vw; /* Set maximum width to 90% of viewport width */
+  max-width: 90vw;
 }
 
 .buttons {
@@ -37,7 +37,7 @@ button {
 }
 
 button {
-  @apply bg-[#313131] font-light rounded-full h-16 w-16 sm:h-20 sm:w-20 text-4xl flex justify-center items-center text-center p-0 m-0;
+  @apply bg-[#313131] font-light rounded-full h-[5rem] w-[5rem] sm:h-20 sm:w-20 text-4xl flex justify-center items-center text-center p-0 m-0;
 }
 
 .buttons button:nth-child(4) {
