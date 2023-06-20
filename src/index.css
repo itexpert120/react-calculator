@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-8xl mb-6 font-thin;
+  @apply text-8xl font-thin break-words;
+}
+
+.display-text {
+  @apply flex-1 my-2;
 }
 
 .wrapper {
   @apply h-screen w-screen flex flex-col justify-end items-center;
-}
-
-img {
-  @apply h-20;
-  fill: #ffffff;
 }
 
 button {
@@ -29,23 +28,24 @@ button {
 }
 
 .calc {
-  @apply max-w-sm mb-8;
+  @apply mx-auto my-8 flex flex-col;
+  max-width: 90vw; /* Set maximum width to 90% of viewport width */
 }
 
 .buttons {
-  @apply flex flex-row gap-4 justify-center items-center my-4;
+  @apply flex flex-row gap-4 justify-center items-center my-4 max-w-sm outline-none;
 }
 
 button {
-  @apply bg-[#313131] rounded-full h-20 w-20 text-4xl flex justify-center items-center text-center p-0 m-0;
+  @apply bg-[#313131] font-light rounded-full h-16 w-16 sm:h-20 sm:w-20 text-4xl flex justify-center items-center text-center p-0 m-0;
 }
 
 .buttons button:nth-child(4) {
-  @apply bg-[#f69906] font-bold text-white;
+  @apply bg-[#f69906] font-semibold text-white text-5xl;
 }
 
 .buttons.bottom-row {
-  @apply mx-auto;
+  @apply flex flex-row justify-around gap-4;
 }
 
 .buttons.bottom-row button:nth-child(1) {
@@ -53,5 +53,5 @@ button {
 }
 
 .buttons.bottom-row button:nth-child(3) {
-  @apply bg-[#f69906] font-bold;
+  @apply bg-[#f69906] font-semibold text-5xl;
 }
